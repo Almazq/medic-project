@@ -1,0 +1,57 @@
+.recipesPage{
+    width: 100%;
+    padding: 40px 5%;
+}
+.recipesPage h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 54.64px;
+    text-align: center;
+    margin: 20px 0;
+
+}
+.recipesList{
+    padding: 20px 5.5%;
+
+}
+.itemRecipes{
+    width: 100%;
+    padding: 33px 0px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0px 0px 50px 0px #0000001A;
+    margin-bottom: 25px;
+}
+
+.itemRecipes > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24.59px;
+    width: 30%;
+
+}
+.itemRecipes > div:first-child , .itemRecipes > div:last-child{
+    width: 20%;
+}
+.itemRecipesId span{
+    padding: 13px 16px;
+    background: #A6DEF7;
+    border-radius: 6px;
+    min-height: 50px;
+    min-width: 71px;
+    text-align: center;
+}
+.disactiveRecipes .itemRecipesId span{
+    background: var(--444, #BEBEBE);
+
+}
+@media (min-width: 2224px) {
+    .recipesPage{
+        padding: 40px 8%;
+    }
+}

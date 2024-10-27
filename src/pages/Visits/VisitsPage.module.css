@@ -1,0 +1,61 @@
+.visitsPage{
+    width: 100%;
+    padding: 40px 5%;
+    display: flex;
+
+
+}
+.visitsPageLeft{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.visitsPageRight{
+    width: 60%;
+    padding: 50px 5%;
+
+}
+.visitsPageRight p{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 32.78px;
+    text-align: center;
+}
+.visitsPageRightIcons{
+    width: 100%;
+    height: auto;
+    padding: 30px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.visitsPageRightIcons img{
+    width: 70%;
+    margin: 0 30px;
+}
+.qrBlock{
+    width: 100%;
+    height: auto;
+    padding: 30px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.qr{
+    width: 184px;
+    height: 177px;
+    background-color: rgba(89, 89, 89, 1);
+
+}
+.qrBlock p{
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24.59px;
+    text-align: center;
+    width: 100%;
+
+}
