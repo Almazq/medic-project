@@ -419,3 +419,106 @@
     height: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 624px) {
+    .zapisFormPage{
+        padding: 100px 3%;
+
+        padding-top: 150px;
+    }
+    .zapisFormPage > h1{
+        font-size: 2rem;
+        line-height: 40.64px;
+        margin-bottom: 30px;
+        text-align: center;
+    
+    }
+    .zapisPageLeft{
+        width: 100%;
+    }
+    .infoblock{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .infoblock > div {
+        width: 100%;
+        gap: 0;
+    }
+    .infoblock > div.infoblockPhoneBlock {
+        width: 100%;  
+    }
+    
+    .infoblock > div.infoblockPhoneBlock > div, 
+    .infoblockNameBlock > div {
+        width: 100%;
+    }
+    .infoblock > div.infoblockPhoneBlock > div , .infoblockNameBlock > div {
+        margin-top: 5px;
+    }
+    .zapisPageLeftAddressBlock{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .zapisPageLeft{
+        padding: 30px 25px;
+    }
+    .formBlock h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .inputsBlock{
+        flex-wrap: wrap;
+    }
+    .inputsBlockLeft{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap:30px;
+        padding: 0 20px;
+    }
+    .inputsBlockLeft input{
+        width: 100%;
+    }
+    .inputsBlockRight{
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+    .inputsBlockRight p {
+        font-size: 1rem;
+    }
+    .iconContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconContainer img{
+        width: 75%;
+    }
+    .textareaBlock{
+        width: 100%;
+        padding: 0 20px;
+
+    }
+    .textareaBlock h1{
+        font-size: 1.9rem;
+    }
+    .checkboxBlock {
+        padding: 20px 15px;
+    
+    }
+    .checkboxBlock p{
+        font-size: 0.95rem;
+    }
+    .btnBlock{
+        padding: 15px 10px;
+    }
+    .btnBlock button{
+        width: 48.5%;
+        height: 45px;
+        border-radius: 1000px ;
+        font-size: 15.5px;
+    
+    }
+}

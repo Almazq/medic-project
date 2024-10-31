@@ -164,3 +164,26 @@
     border: 1px solid #3E36B0;
     color: #3E36B0;
 }
+
+@media (max-width: 624px) {
+    .clinicZapisPage{
+        padding: 50px 3%;
+        padding-top: 130px;
+        flex-wrap: wrap;
+    }
+    .leftBlock{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .leftBlock h1{
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    .zapisPageRight{
+        width: 100%;
+        padding: 30px 10px;
+    }
+}

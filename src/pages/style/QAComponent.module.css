@@ -97,3 +97,21 @@
     line-height: 24.59px;
     text-align: left;
 }
+
+@media (max-width: 624px) {
+    .QAComponentBlock{
+        padding: 50px 3%;
+        padding-top: 150px;
+    }
+    .QAComponentBlock h1{
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .questionBlockItem {
+        padding: 25px 25px;
+    }
+    .questionBlockItem > p {
+        font-size: 1rem;
+        width: 90%;
+    }
+}

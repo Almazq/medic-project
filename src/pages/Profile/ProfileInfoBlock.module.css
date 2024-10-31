@@ -128,3 +128,19 @@
 
 
 
+@media (max-width: 624px) {
+
+    .changeBlockLeft{
+        width: 100%;
+    }
+    .changeBlock.open {
+        height: auto;
+        max-height: max-content;
+    }
+    .changeBlockRight{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+}

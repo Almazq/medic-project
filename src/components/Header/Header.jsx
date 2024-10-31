@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg';
@@ -8,7 +8,11 @@ import cx from 'classnames';
 function Header({ isLoggedIn }) {
   const location = useLocation();
   const [mobileMenuState , setMobileMenuState] = useState(false);
-
+  useEffect(() => {
+    if (mobileMenuState) {
+      setMobileMenuState(false);
+    }
+  }, [location.pathname]);
   return (
     <header className={styles.header}>
       <div className={styles.headerTopBlock}>tryb dla słabowidzących</div>

@@ -347,3 +347,61 @@
     text-align: center;
 
 }
+
+@media (max-width: 624px) {
+    .authPageContent {
+        width: 100%;
+    }
+    .signIn h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+    .signIninputBlock {
+        padding: 10px 20px;
+    }
+    .signInbtnBlock {
+        padding: 10px 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .signInbtnBlock a{
+        width: 100%;
+        padding-left: 25px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+
+    }
+    .signIninputBlock input {
+        height: 50px;
+        font-size: 1rem;
+    }
+    .authPage button{
+        height: 42px;
+        font-size: 0.9rem;
+        width: 60%;
+    }
+    .signIn{
+        width: 100%;
+    }
+    .signInContent{
+        width: 92%;
+    }
+    .signInContent {
+        padding: 35px 5%;
+    }
+    .registService{
+        padding: 5px 15px;
+    }
+    .registerServiceItem{
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .lub{
+        padding: 5px 30px;
+    }
+    .registBtnBlock{
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -29,7 +29,7 @@ function ClinicCard(props) {
                     </p>
                 </div>
                 <div className={styles.namelinkBlock}>
-                    <NavLink to={`/clinic-profile/${data.id}`}>Więcej&#8594;</NavLink>
+                    <NavLink to={`/profile -clinic/${data.id}`}>Więcej&#8594;</NavLink>
                 </div>
             </div>
             <div className={styles.clinicInfo}>

@@ -553,8 +553,13 @@
     height: auto;
     box-shadow: 0px 0px 50px 0px #0000001A;
     padding: 30px;
-}
+    cursor: pointer;
+    transition: 0.5s;
 
+}
+.priceTariffCard:hover{
+    box-shadow: 0px 0px 50px 0px #3E36B066;
+}
 .priceTariffCard h1{
     font-size: 20px;
     font-weight: 500;

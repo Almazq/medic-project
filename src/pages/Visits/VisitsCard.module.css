@@ -93,3 +93,24 @@
     border-top: 1px solid #3E36B0;
 
 }
+
+@media (max-width: 624px) {
+    .visitsCard{
+        width: 100%;
+        padding: 30px 25px;
+    }
+    .visitsCardAddressBlock{
+        font-size: 0.98rem;
+        margin-top: 15px;
+    }
+    .visitsCardCity{
+        font-size: 0.85rem;
+    }
+    .visitsCardBottomPrice{
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+
+    }
+
+}

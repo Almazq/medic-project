@@ -93,3 +93,26 @@
     padding: 0 3%;
 }
  /* Review Card */
+
+
+ @media (max-width: 624px) {
+    .doctorProfile{
+        padding: 40px 3%;
+        padding-top: 130px;
+    }
+    .titleBLock h2{
+        font-size: 1.2rem;
+        line-height: 34.64px;
+    }
+    .titleBLock{
+        align-items: center;
+    }
+    .titleBLock button{
+        width: 149px;
+        height: 39px;
+        font-size: 14px;
+    }
+    .review{
+        padding: 0;
+    }
+ }

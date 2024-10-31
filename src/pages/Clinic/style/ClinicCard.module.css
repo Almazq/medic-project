@@ -81,3 +81,29 @@
 .clinicCard a{
     color: #3E36B0;
 }
+
+@media (max-width: 624px) {
+    .nameBlock>img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .namelinkBlock{
+        display: none;
+    }
+    .nameBlockText{
+        width: auto;
+        max-width: calc(100% - 50px);
+    }
+    .nameBlock p {
+        font-size: 1rem;
+    }
+    .nameBlock span {
+        font-size: 0.9rem;
+        line-height: 20.59px;
+    }
+    .clinicInfo > div > div{
+        font-size: 1rem;
+    }
+    
+}

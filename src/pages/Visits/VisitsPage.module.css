@@ -59,3 +59,22 @@
     width: 100%;
 
 }
+
+@media (max-width: 624px) {
+    .visitsPage{
+        padding-top: 150px;
+        flex-wrap: wrap;
+    }
+    .visitsPageLeft{
+        width: 100%;
+    }
+    .visitsPageRight{
+        width: 100%;
+    }
+    .visitsPageRightIcons{
+        padding: 36px 2%;
+    }
+    .qrBlock{
+        display: none;
+    }
+}

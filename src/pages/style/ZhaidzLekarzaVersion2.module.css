@@ -232,3 +232,15 @@
     margin-top: 50px;
 }
 
+@media (max-width: 624px) {
+    .zhaidzLekarza{
+        padding-top: 100px;
+    }
+    .mainFormIntupsBlock{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .dropdownContainer.litle {
+        width: 100%;
+    }
+}

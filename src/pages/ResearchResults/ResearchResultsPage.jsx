@@ -26,8 +26,8 @@ function ResearchResultsPage() {
             <div className={styles.resultsMainBtnBlock}>
                 <div className={styles.resultsBtnConteiner}>
                     <span style={{ left: btnState == 'Winiki badań' ? "0%" : "50%" }}></span>
-                    <div onClick={() => setBtnState('Winiki badań')} style={{ color: btnState == 'Winiki badań' ? "#fff" : "#000" }}>Winiki badań</div>
-                    <div onClick={() => setBtnState('Inne dokumenty')} style={{ color: btnState == 'Inne dokumenty' ? "#fff" : "#000" }}>Inne dokumenty</div>
+                    <div onClick={() => setBtnState('Winiki badań')} style={{ color: btnState == 'Winiki badań' ? "#000" : "#fff" }}>Winiki badań</div>
+                    <div onClick={() => setBtnState('Inne dokumenty')} style={{ color: btnState == 'Inne dokumenty' ? "#000" : "#fff" }}>Inne dokumenty</div>
 
                 </div>
             </div>
@@ -40,7 +40,7 @@ function ResearchResultsPage() {
                                 <div className={styles.listItem} key={item.id}>
                                     <div className={styles.listItemName}> {item.name}</div>
                                     <div className={styles.listItemDate}> {item.date}</div>
-                                    <div onClick={() => handleDownload(item.fileUrl)}><img src={img} /></div>
+                                    <div onClick={() => handleDownload(item.fileUrl)} className={styles.listItemImg}><img src={img} /></div>
                                 </div>
                             )
                         : stateResaerchResult.otherDocs.length == 0
@@ -49,7 +49,7 @@ function ResearchResultsPage() {
                                 <div className={styles.listItem} key={item.id}>
                                     <div className={styles.listItemName}> {item.name}</div>
                                     <div className={styles.listItemDate}> {item.date}</div>
-                                    <div onClick={() => handleDownload(item.fileUrl)}><img src={img} /></div>
+                                    <div onClick={() => handleDownload(item.fileUrl)} className={styles.listItemImg}><img src={img} /></div>
                                 </div>
                             )
                 }

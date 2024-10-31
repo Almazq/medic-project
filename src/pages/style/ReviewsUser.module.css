@@ -8,3 +8,10 @@
 .reviews{
     margin-top: 50px;
 }
+@media (max-width: 624px) {
+    .reviewsBlock{
+        padding: 50px 3%;   
+
+        padding-top: 130px;
+    }
+}

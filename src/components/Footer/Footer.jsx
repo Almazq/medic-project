@@ -62,7 +62,7 @@ function Footer() {
                             <ul>
                                 <li><NavLink to="/QA">Dla pacjentów</NavLink></li>
                                 <li><a href="#">Lekarze</a></li>
-                                <li><a href="#">Placówki medyczne</a></li>
+                                <li><NavLink to="Search-clinic">Placówki medyczne</NavLink></li>
                                 <li><a href="#">Usługi i zabiegi</a></li>
                                 <li><a href="#">Pomoc</a></li>
                             </ul>

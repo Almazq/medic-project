@@ -179,3 +179,40 @@
     text-align: center;
 
 }
+
+
+@media (max-width: 624px) {
+    .clinickPage{
+        padding-top: 120px;
+    }
+    .clinickPage h1 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .mainFormIntupsBlock{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .dropdownContainer ,.dropdownContainer:nth-child(2) , .dropdownContainer.litle{ 
+        width: 100%;
+    }
+    .filterBtnBlock{
+        width: 100%;
+    }
+    .filterBtnBlock button{
+        width: 100%;
+        height: 42px;
+        font-size: 15px;
+    }
+    .dropdownMenuItem{
+        font-size: 15px;
+    }
+    .dropdown{
+        height: 45px;
+        font-size: 15px;
+    }
+    .clinicCardsBlock{
+        grid-template-columns: 1fr;
+    }
+}

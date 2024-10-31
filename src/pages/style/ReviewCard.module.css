@@ -40,3 +40,31 @@ line-height: 24.59px;
     margin-top: 20px;
     padding: 20px 0;
 }
+
+@media (max-width: 624px) {
+    .reviewCard{
+        padding: 30px 25px;
+    }
+    .userInfo > img{
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+    }
+    .userInfo .reviewNameBlock{
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .starsBlock{
+        width: 75px;
+        display: flex;
+    }
+    .starsBlock img {
+        width: 14px;
+    }
+    .userReviewText{
+        margin-top: 0;
+        padding: 20px 0;
+    }
+}

@@ -63,3 +63,19 @@
 .mainFormIntupsBlock .arrow {
     
 } */
+
+
+@media (max-width: 624px) {
+    .uslugiBlock {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .uslugiTypeItem{
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+    .uslugiTypeItem > div{
+        width: 100%;
+    }
+}

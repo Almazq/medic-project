@@ -240,3 +240,18 @@
     border: 1px solid #3E36B0;
     color: #3E36B0;
 }
+
+@media (max-width: 624px) {
+    .zapisPage{
+        padding: 80px 3%;
+        padding-top: 150px;
+        flex-wrap: wrap;
+    }
+    .zapisPageLeft{
+        width: 100%;
+    }
+    .zapisPageRight{
+        width: 100%;
+        padding: 30px 10px;
+    }
+}

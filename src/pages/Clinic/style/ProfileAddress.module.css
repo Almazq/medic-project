@@ -66,3 +66,33 @@
     margin-left: 8px;
 
 }
+
+@media (max-width: 624px) {
+    .addressBlock{
+        width: 100%;
+        padding: 0 2%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .leftBlock{
+        width: 100%;
+    }
+    .rightBlock{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+    }
+    .rightTextBlock{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: 20px;
+    }
+    .rightTimeBlock{
+        justify-content: center;
+    }
+}

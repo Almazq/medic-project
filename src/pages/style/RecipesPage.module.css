@@ -50,6 +50,58 @@
     background: var(--444, #BEBEBE);
 
 }
+
+@media (max-width: 624px) {
+    .recipesPage{
+        padding-top: 150px;
+    }
+    .recipesList{
+        padding: 0;
+    }
+    .itemRecipes{
+        padding: 20px 35px ;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .itemRecipes > div , .itemRecipes > div:first-child , .itemRecipes > div:last-child{
+        width: 100%;
+    }
+    .itemRecipes > div:nth-child(1){
+        order: 1;
+        grid-column: 1 / 2;
+    }
+    .itemRecipes > div:nth-child(4){
+        order: 2;
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
+    .itemRecipes > div:nth-child(2){
+        order: 3;
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+    .itemRecipes > div:nth-child(3){
+        order: 4;
+        grid-column: 1 / 3;
+        margin-top: 8px;
+
+    }
+    .itemRecipes > div{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    
+    }
+    .itemRecipes > div.itemRecipesId{
+        justify-content: end;
+
+    }
+    .recipesPage h1{
+        font-size: 1.8rem;
+        line-height: 45px;
+    }
+    
+}
 @media (min-width: 2224px) {
     .recipesPage{
         padding: 40px 8%;

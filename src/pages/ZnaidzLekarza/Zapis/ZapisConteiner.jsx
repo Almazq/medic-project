@@ -71,6 +71,7 @@ function ZapisConteiner({ zapisState , isLoggedIn}) {
 
     const addZapisFc = async (name, surName, phone, pesel, file, comments) => {
         // setActivePageName('loading');
+        alert('successfully created')
         setActivePageName('ZapisDone')
 
         const formData = new FormData();

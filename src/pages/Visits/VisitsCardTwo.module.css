@@ -138,3 +138,27 @@
     text-align: left;
     border-top: 1px solid #3E36B0;
 }
+
+@media (max-width: 624px) {
+    .visitsPageLeft{
+        width: 100%;
+        padding: 30px 25px;
+    }
+    .infoblock{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .infoblock > div {
+        width: 100%;
+        gap: 0;
+    }
+    .infoblock > div.infoblockPhoneBlock {
+        width: 100%;  
+    }
+    
+    .infoblock > div.infoblockPhoneBlock > div, 
+    .infoblockNameBlock > div {
+        width: 100%;
+    }
+
+}

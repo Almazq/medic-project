@@ -167,3 +167,13 @@
     color: #ccc; /* Установите цвет для отключенных кнопок */
     cursor: not-allowed;
 }
+
+
+@media (max-width: 624px) {
+    .bookingContainer{
+        justify-content: center;
+    }
+    .bookingContainerRow{
+        width: 90%;
+    }
+}

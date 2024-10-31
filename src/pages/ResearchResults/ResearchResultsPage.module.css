@@ -93,3 +93,34 @@
         padding: 40px 8%;
     }
 }
+@media (max-width: 624px) {
+    .researchResultsPage{
+        padding-top: 150px;
+    }
+    .listItem {
+        padding: 28px 30px;
+        display: grid;
+        grid-template-columns: 85% 15%;
+        height: auto;
+
+    }
+    .listItemName{
+        grid-column: 1 / 2;
+        width: 100%;
+        max-width: none;
+        padding-bottom: 15px;
+    }
+    .listItemDate {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        width: 100%;
+    }
+    .listItemImg{
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+    .resultsBtnConteiner > div{
+        z-index: 2;
+    }
+}
