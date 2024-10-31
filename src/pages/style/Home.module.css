@@ -319,7 +319,12 @@
         flex-wrap: wrap;
         position: relative;
         padding: 150px 0;
+        width: 100%;
+        overflow: hidden;
 
+    }
+    .homeFirstBlock img{
+        width: 100%;
     }
     
     .homeFirstBlockLeft {
@@ -329,6 +334,7 @@
         z-index: 1;
         top: 0;
         left: 0;
+        overflow: hidden;
 
     }
     
@@ -393,4 +399,5 @@
         line-height: 20px;
         margin-bottom: 3px;
     }
+    
   }

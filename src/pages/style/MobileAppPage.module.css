@@ -110,7 +110,59 @@
     line-height: 27px;
     margin-bottom: 8px;
 }
+@media (max-width: 624px) {
+    .firstBlockRight{
+        display: none;
+    }
+    .firstBlock{
+        padding: 70px 5%;
+        padding-top: 150px;
+    }
+    .firstBlockLeft{
+        width: 95%;
+    }
+    .firstBlockLeft h1{
+        font-size: 1.9rem;
+        line-height: 42px;
+        margin-bottom: 15px;
+    }
+    .firstBlockLeftIcons{
+        padding: 40px 0%;
+    }
+    .imageBlock {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 30px 3%;
+        gap: 13px;
+    }
+    .imageBlock > div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+    }
+    .imageBlock > div:first-child{
+        border-bottom: 0.8px solid #000;
+    }
+    .imageBlock > div:last-child{
+        border-top: 0.8px solid #000;
+    }
+    .itemImg{
+        width: 40%;
+    }
+    .itemImg img{
+        width: 100%;
+        height: auto;
+    }
+    .itemText {
+        width: 60%;
+        padding: 0;
 
+    }
+    .itemText p.itemTextTitle{
+        font-size: 1.2rem;
+    }
+}
 
 @media (min-width: 1024px) and (max-width: 1280px) {
    .firstBlock{

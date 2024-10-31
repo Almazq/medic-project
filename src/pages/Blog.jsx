@@ -109,6 +109,11 @@ function Blog() {
                                 slidesPerView={3}
                                 loop={true}
                                 className={styles.mySwiper}
+                                breakpoints={{
+                                    320: { slidesPerView: 1 }, 
+                                    768: { slidesPerView: 2 }, 
+                                    1024: { slidesPerView: 3 }, 
+                                }}
                             >
                                 {item.data.map(el => (
                                     <SwiperSlide className={styles.slideItem} key={el.id}>

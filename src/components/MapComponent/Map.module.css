@@ -91,7 +91,7 @@ svg {
   .mapBlock {
     width: 100%;
     flex-wrap: wrap;
-    padding: 50px 0;
+    padding: 30px 0;
     height: auto;
 
   }
@@ -104,5 +104,31 @@ svg {
   }
   .mapBlockRight svg{
     width: 100%;
+    margin-top: -50px;
+  }
+  .staticItem h3 {
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .staticItem p {
+    font-size: 15.5px;
+    width: 100%;
+    text-align: center;
+  }
+  .staticBlock {
+    width: 96%;
+  }
+  .mapBlockLeft h1 {
+    font-size: 2rem;
+  }
+  .staticItem img {
+    height: 30px;
+  }
+  .staticItem {
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

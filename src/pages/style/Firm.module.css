@@ -1,6 +1,6 @@
 .firmInfo{
     width: 100%;
-    padding: 50px 7%;
+    padding: 50px 10%;
     padding-top: 100px;
 }
 .firmInfo h1{
@@ -18,6 +18,8 @@
 .firmInfoDescriptionLeft{
     width: 45%;
     height: auto;
+    z-index: 2;
+    position: relative;
 
 }
 .firmInfoDescriptionLeft p{
@@ -49,40 +51,32 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1.5%;
+    position: relative;
+    z-index: 1;
 }
-.firmInfoItem{
-    width: 44%;
+
+.firstBlockImgOne{
+    position: absolute;
     height: auto;
-    display: flex;
-    align-items: start;
-}
-
-.firmInfoItem h2{
-    color:#3E36B0;
-    font-size: 2.4375rem;
-    font-weight: 500;
-    line-height: 27px;
-    margin-bottom: 10px;
+    width: 100%;
+    bottom: 0;
+    right: 0;
 
 }
-.firmInfoItem p{
-    font-size: 1.0625rem;
-    font-weight: 400;
-    line-height: 27px;
-}
-.firmInfoItemTxt{
-    margin-left: 13px;
-}
-.firmInfoItem img{
+.firstBlockImgTwo{
+    height: auto;
+    max-width: 55%;
     width: auto;
-    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: -25%;
 }
 
 
 .aboutMe{
     width: 100%;
     padding: 0 8%;
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 120px;
 }
 .aboutMe h1{
@@ -657,6 +651,160 @@
   }
 
 
+  @media (max-width: 624px) {
+    .firmInfo{
+        padding: 50px 4%;
+        padding-top: 150px;
+    }
+    .firmInfoDescriptionright{
+        display: none;
+    }
+    .firmInfoDescriptionLeft{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .firmInfoDescription{
+        padding-top: 10px;
+        
+    }
+    .firmInfoDescriptionLeft p{
+        width: 100%;
+    }
+    .aboutMe{
+        padding-bottom: 20px;
+    }
+    .aboutMeItemConteiner{
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    .aboutMeItem{
+        width: 90%;
+        margin: 0;
+        margin-bottom: 18px;
+    }
+    .aboutMeItem h2{
+        font-size: 200px;
+    }
+    .priceSliderBlock{
+        padding-top: 15px;
+    }
+    .priceSliderBlock > h1{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .priceContent{
+        padding: 40px 1%;
+    }
+    .navPriceSlide{
+        width: 100%;
+        justify-content: space-between;
+
+    }
+    .navPriceSlide > div{
+        font-size: 1.2rem;
+    }
+    .sliderContentOneBlock , .sliderContentTwoBlock{
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .priceTariffCard h1{
+        font-size: 1.3rem;
+        line-height: 35px;
+    }
+    .priceTariffCard{
+        padding: 25px 25px;
+    }
+    .block3D{
+        position: relative;
+        padding: 0;
+    }
+    .block3D > div{
+        width: 100%;
+    }
+    .block3DLeft{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+    }
+    .block3D h1{
+        font-size: 7.9rem;
+    }
+    .block3DRight{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        background-color: #f0f0f024;
+        padding: 30px 8%;
+    }
+    .block3DRight h2{
+        width: 100%;
+        font-size: 2rem;
+        line-height: 35px;
+        text-align: center;
+
+    }
+    .block3DRight p{
+        width: 100%;
+        text-align: center;
+    }
+    .partners{
+        padding: 25px 3%;
+    }
+    .partnersBtn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .partnersBtn a{
+        width: 60%;
+    }
+    .formBlock {
+        width: 95%;
+        padding: 20px 25px;
+      }
+      .formBlockConteiner {
+        padding: 10% 4%;
+    
+      }
+      .form {
+        width: 100%;
+        padding-top: 20px;
+      }
+      .form input , .dropdownContainer{
+        width: 100%;
+      }
+      .formBtn {
+        width: 100%;
+      }
+      .questionBlock h1 {
+        font-size: 1.8rem;
+      }
+      .questionBlock {
+        padding: 10px 4%;
+      }
+      .questionBlockItem {
+        padding: 20px 25px;
+      }
+      .questionBlockItem > p {
+        width: 90%;
+        font-size: 1.1rem;
+        line-height: 30px;
+      }
+  }
 @media (min-width: 1024px) and (max-width: 1400px) {
     .aboutMe{
         padding: 0 5%;

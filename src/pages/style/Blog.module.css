@@ -304,6 +304,8 @@ button.activeButton {
     background: #191919;
 }
 
+
+
 @media screen and (max-width: 1200px) {
     .blogContainer {
         padding: 60px 6%;
@@ -315,10 +317,32 @@ button.activeButton {
         padding: 40px 4%;
     }
 
-    .blogsFilterActiveItem,
-    .slideItemContainer {
+    .blogsFilterActiveItem{
         width: 100%;
         height: auto;
+    }
+}
+@media (max-width: 624px) {
+    .searchBar {
+        padding-top: 150px;
+        height: auto;
+    }
+    .buttonContainer{
+        margin: 25px 0;
+        display: grid;
+        grid-template-rows: repeat(2, auto); 
+        grid-auto-flow: column;
+        gap: 10px; 
+        overflow:auto;
+    }
+    .buttonContainer button {
+        width: auto;
+        white-space: nowrap;
+    }
+    .blogSlideContainer{
+        width: 94%;
+        margin-left: 3%;
+        height: 430px;
     }
 }
 

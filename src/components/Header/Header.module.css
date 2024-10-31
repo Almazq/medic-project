@@ -142,6 +142,7 @@
     }
     .header{
         position: fixed;
+        z-index: 3;
     }
     .headerNavigate ul{
         display: block;

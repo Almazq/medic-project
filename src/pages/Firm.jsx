@@ -22,6 +22,10 @@ import img19 from '../assets/Vector80.svg';
 import img20 from '../assets/Vector81.svg';
 import img21 from '../assets/Group (3).svg';
 import vector from '../assets/Vector9.svg';
+import imgfirstBlock1 from '../assets/Group 5.svg';
+import imgfirstBlock2 from '../assets/Group 6.svg';
+
+
 import { sendFormData } from '../services/apiService';
 import PartnersSlider from '../components/PartnersSlider';
 
@@ -77,38 +81,13 @@ function Firm() {
         <div className={styles.firmInfoDescription}>
           <div className={styles.firmInfoDescriptionLeft}>
             <p>Korzystaj z kalendarza online, promuj swoją markę, przyciągaj nowych pacjentów i zatrzymuj starych, dostarczając doskonałe cyfrowe doświadczenia pacjenta. Automatyzacja rezerwacji wizyt zmniejsza czas oczekiwania i zwiększa zadowolenie pacjentów.</p>
-            <p>Inwestując w nowoczesne rozwiązania cyfrowe, nie tylko podnosisz standard swojej praktyki, ale także pokazujesz pacjentom, że jesteś na bieżąco z najnowszymi trendami w medycynie</p>
+            <p>Inwestując w nowoczesne rozwiązania cyfrowe, nie tylko podnosisz standard swojej praktyki, ale także pokazujesz pacjentom,<br/> że jesteś na bieżąco z najnowszymi trendami w medycynie</p>
             <button>Skontaktuj się z administratorem</button>
           </div>
           <div className={styles.firmInfoDescriptionright}>
-            <div className={styles.firmInfoItem}>
-              <img src={img1} alt="Statystyka 1" />
-              <div className={styles.firmInfoItemTxt}>
-                <h2>+12 000</h2>
-                <p>Pacjentów korzystających co miesiąc ze MyLekarz</p>
-              </div>
-            </div>
-            <div className={styles.firmInfoItem}>
-              <img src={img3} alt="Statystyka 2" />
-              <div className={styles.firmInfoItemTxt}>
-                <h2>+800</h2>
-                <p>Zarejestrowanych firm w naszym serwisie</p>
-              </div>
-            </div>
-            <div className={styles.firmInfoItem}>
-              <img src={img2} alt="Statystyka 3" />
-              <div className={styles.firmInfoItemTxt}>
-                <h2>+20 200</h2>
-                <p>Wizyt miesięcznie rejestrowanych online na MyLekarz</p>
-              </div>
-            </div>
-            <div className={styles.firmInfoItem}>
-              <img src={img4} alt="Statystyka 4" />
-              <div className={styles.firmInfoItemTxt}>
-                <h2>1 200</h2>
-                <p>Opinii o specjalistach pozostawionych przez pacjentów</p>
-              </div>
-            </div>
+            <img src={imgfirstBlock2} className={styles.firstBlockImgOne}/>
+            <img src={imgfirstBlock1} className={styles.firstBlockImgTwo}/>
+
           </div>
         </div>
       </div>
@@ -133,8 +112,8 @@ function Firm() {
         </div>
       </div>
       <div className={styles.priceSliderBlock}>
-        <h1>Otwórz nowe możliwości dla swojej firmy! <br/>
-        Kup dostęp do naszego portalu i zwiększ swoją efektywność.</h1>
+        <h1> <p>Otwórz nowe możliwości dla swojej firmy! </p>
+        <p>Kup dostęp do naszego portalu i zwiększ swoją efektywność.</p></h1>
         <div className={styles.priceContent}>
           <div className={styles.navPriceSlide}>
             <div className={priceSliderState == 'Dla specjalistów' && styles.navPriceSlideActiveArticle} onClick={()=>setPriceSliderState('Dla specjalistów')}>Dla specjalistów</div>

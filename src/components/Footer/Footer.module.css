@@ -251,9 +251,37 @@
     }
     .footerBottom{
         flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        
     }
     .footerNavigateBlockTopMenu{
         flex-wrap: wrap;
+        width: 100%;
 
+    }
+    .phoneBlocks{
+       order: 2;
+       width: 100%;
+    }
+    .footerNavigateBlock{
+       order:1;
+    }
+    .footerNavigateBlockTop{
+        flex-wrap: wrap;
+    }
+    .footerNavigateBlockTopMenu > div{
+        margin: 0 6px;
+    
+    }
+    .footerNavigateBlockTopMenu a{
+        font-size: 14px;
+    }
+    .footerNavigateBlock{
+      padding: 0 8px;
+    }
+    .footerNavigateBlockTopBtn , .footerTopUpBtn{
+        display: none;
     }
 }

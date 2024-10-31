@@ -130,3 +130,65 @@
     text-decoration: none;
     color: #000;
 }
+@media (max-width: 624px) {
+    .doctorDescription{
+        width: 100%;
+    }
+    .doctorCard {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    
+
+    .doctorCardAddressBlock {
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+        text-align: center;
+    }
+
+    .doctorDescription {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 0;
+    }
+
+    .doctorCardTimeBlock {
+        padding: 15px 0;
+    }
+
+    .doctorCardTimeBlockItems {
+        flex-direction: column;
+    }
+
+    .doctorCardTimeBlockItem {
+        width: 100%;
+    }
+
+    .doctorCardHoursItems {
+        /* justify-content: center; */
+        gap: 5px;
+    }
+
+    .doctorCardHoursItem {
+        padding: 5px 10px;
+    }
+    .doctorDescription p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+    .doctorCardAddressBlock > div > div{
+        font-size: 15px;
+    }
+    .doctorCardAddressPlaceholder{
+        display: none;
+    }
+    .doctorCardAddressBlock > div{
+        padding: 5px 3px;
+    }
+}

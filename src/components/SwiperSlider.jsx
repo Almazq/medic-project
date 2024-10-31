@@ -22,7 +22,15 @@ const SwiperSlider = () => {
 
         breakpoints={{
           0: {
-            slidesPerView: 1.1,  
+            slidesPerView: 1.01,  
+            spaceBetween: 10,
+          },
+          380: {
+            slidesPerView: 1.05,  
+            spaceBetween: 10,
+          },
+          420: {
+            slidesPerView: 1.08,  
             spaceBetween: 10,
           },
           640: {

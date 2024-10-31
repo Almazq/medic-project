@@ -50,3 +50,11 @@
 .partnersSliderBtn img{
     height:9px;
 }
+@media (max-width: 624px) {
+    .partnersBtnArrowLeft , .partnersBtnArrowRight{
+        padding: 0 15px;
+    }
+    .partnersIconsItem{
+        width: 50%;
+    }
+}

@@ -227,3 +227,61 @@
     text-align: center;
 
 }
+
+
+@media (max-width: 624px) {
+    .filterBlock{
+        padding-top: 150px;
+    }
+    .filterBlockContent{
+        width: 85%;
+        min-height: 280px;
+        height: auto;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        padding: 10px 20px;
+    }
+    .filterBlockContentSelects{
+        height: auto;
+    }
+    .mainFormIntupsBlock {
+        display: grid;
+        grid-template-columns: 1fr; 
+        height: auto;
+    }
+    
+    .dropdownContainer:nth-child(1),
+    .dropdownContainer:nth-child(2) {
+        grid-column: span 2; 
+    }
+    
+    .dropdownContainer:nth-child(3),
+    .dropdownContainer:nth-child(4) {
+        grid-column: span 1; 
+    }
+    .mainFormIntupsBlock > div , .dropdownContainer.litle , .dropdownContainer:nth-child(2){
+        width: 100%;
+    }
+    .filterBtnBlock{
+        margin: 25px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .filterBtnBlock button{
+        width: 100%;
+        height: 47px;
+    }
+    .zhaidzLekarzaContentTitle{
+        flex-wrap:wrap;
+        padding: 20px 0;
+        justify-content: center;
+    }
+    .zhaidzLekarzaContentTitle h2{
+        font-size: 29px;
+        text-align: center;
+        line-height: 39.64px;
+    }
+    .zhaidzLekarzaContentTitle button{
+        margin: 20px 0;
+    }
+}
