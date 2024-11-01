@@ -7,11 +7,13 @@ import visitorImg from '../../../assets/Vector15.svg';
 import downloadimg from '../../../assets/material-symbols-light_download.svg';
 import commentsImg from '../../../assets/iconamoon_comment-light.svg';
 import AppPromo from '../../../components/AppPromo/AppPromo'
+import { NavLink, useParams } from 'react-router-dom';
 
 
 
 function ZapisDone(props) {
     const [data, setData] = useState(props.data);
+    const { id } = useParams();
     const doctorInfo = data.allData || {};
     return (
         <div className={styles.zapisDone}>
@@ -20,8 +22,8 @@ function ZapisDone(props) {
                     <div>
                         <h1>Zarezerwowane!</h1>
                         <div className={styles.zapisDoneFirstBtnBlock}>
-                            <button>Wróć na główną stronę</button>
-                            <button>Przejdż do kalendarza</button>
+                            <NavLink to={'/'}>Wróć na główną stronę</NavLink>
+                            <NavLink to={'/znajdz-lekarza/'}>Przejdż do kalendarza</NavLink>
 
                         </div>
                     </div>
@@ -70,7 +72,7 @@ function ZapisDone(props) {
                                 <img src={downloadimg} />
                                 <div>
                                     <p>Dodane dokumenty:</p>
-                                    <span>{props.formDataObj.file.lenght < 3 ? 'undefined' : props.formDataObj.file}</span>
+                                    <span>{props.formDataObj.file && props.formDataObj.file.length < 3 ? 'undefined' : props.formDataObj.file}</span>
                                 </div>
                             </div>
                             <div className={styles.fileNameBlock}>

@@ -419,7 +419,9 @@
     height: 20px;
     cursor: pointer;
 }
-
+.btnBlock button{
+    cursor: pointer;
+}
 @media (max-width: 624px) {
     .zapisFormPage{
         padding: 100px 3%;

@@ -126,6 +126,10 @@
     /* margin-top: 10%; */
 
 }
+
+.headerProfileBtnMobile , .headerSignBtnMobile{
+    display: none ;
+}
 @media (max-width: 624px) {
     .header{
         width:100%;
@@ -140,9 +144,21 @@
     .headerProfileBtn , .headerSignBtn{
         display: none ;
     }
+    .headerProfileBtnMobile , .headerSignBtnMobile{
+        display: block ;
+        margin: 0 15px;
+    }
+    .headerProfileBtnMobile a , .headerSignBtnMobile a{
+        color: #000;
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: 500;
+        transition: 0.4s;
+        position: relative;
+    }
     .header{
         position: fixed;
-        z-index: 3;
+        z-index: 88;
     }
     .headerNavigate ul{
         display: block;

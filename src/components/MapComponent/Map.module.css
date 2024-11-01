@@ -120,7 +120,19 @@ svg {
     width: 96%;
   }
   .mapBlockLeft h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 38px;
+    text-align: center;
+    width: 100%;
+  }
+  .leftBtnblock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .leftBtnblock button {
+    width: 55%;
+    height: 43px;
   }
   .staticItem img {
     height: 30px;

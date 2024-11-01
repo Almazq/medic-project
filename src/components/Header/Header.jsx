@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../../assets/logo.svg';
@@ -7,7 +7,7 @@ import cx from 'classnames';
 
 function Header({ isLoggedIn }) {
   const location = useLocation();
-  const [mobileMenuState , setMobileMenuState] = useState(false);
+  const [mobileMenuState, setMobileMenuState] = useState(false);
   useEffect(() => {
     if (mobileMenuState) {
       setMobileMenuState(false);
@@ -57,6 +57,11 @@ function Header({ isLoggedIn }) {
                 <NavLink to="/firm">Dla firm</NavLink>
               </li>
             }
+            {
+              isLoggedIn
+                ? <li className={styles.headerProfileBtnMobile}><NavLink to="/Profile">Profile</NavLink></li>
+                : <li className={styles.headerSignBtnMobile}><NavLink to="/Auth">Zaloguj się</NavLink></li>
+            }
           </ul>
         </div>
         {
@@ -64,7 +69,7 @@ function Header({ isLoggedIn }) {
             ? <div className={styles.headerProfileBtn}><NavLink to="/Profile"><img src={imgProfile} alt="profile" /></NavLink></div>
             : <div className={styles.headerSignBtn}><NavLink to="/Auth">Zaloguj się</NavLink></div>
         }
-        <div className={styles.headerMobileBtn} onClick={()=>setMobileMenuState(!mobileMenuState)}>
+        <div className={styles.headerMobileBtn} onClick={() => setMobileMenuState(!mobileMenuState)}>
           <span></span>
           <span></span>
           <span></span>

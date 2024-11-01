@@ -318,50 +318,52 @@
   .howItWorksImageBlock .arrow {
     display: none;
   }
-
   .howItWorksImageBlock>div {
     width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
-  }
-
-  .howItWorksImageBlock>div:first-child {
-    border-bottom: 0.8px solid #000;
-  }
-
-  .howItWorksImageBlock>div:last-child {
-    border-top: 0.8px solid #000;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .itemImg {
-    width: 40%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .itemImg img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
 
   .itemText {
-    width: 60%;
+    width: 70%;
 
   }
+
   .formBlock {
     width: 95%;
     padding: 20px 25px;
   }
+
   .formBlockConteiner {
     padding: 10% 4%;
 
   }
+
   .form {
     width: 100%;
     padding-top: 20px;
   }
-  .form input , .dropdownContainer{
+
+  .form input,
+  .dropdownContainer {
     width: 100%;
   }
+
   .formBtn {
     width: 100%;
   }

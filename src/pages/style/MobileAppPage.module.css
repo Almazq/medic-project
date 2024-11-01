@@ -135,24 +135,28 @@
         padding: 30px 3%;
         gap: 13px;
     }
+    
     .imageBlock > div{
         width: 100%;
         display: flex;
         align-items: center;
-        padding-bottom: 8px;
-    }
-    .imageBlock > div:first-child{
-        border-bottom: 0.8px solid #000;
-    }
-    .imageBlock > div:last-child{
-        border-top: 0.8px solid #000;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .itemImg{
-        width: 40%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .itemImg img{
-        width: 100%;
+        width: 80%;
         height: auto;
+    }
+    .itemText {
+        width: 60%;
+
     }
     .itemText {
         width: 60%;

@@ -92,8 +92,21 @@
     margin-top: 30px;
     padding: 0 3%;
 }
- /* Review Card */
-
+.profileNameBtn{
+    margin-top: 5px;
+}
+ .profileNameBtn a{
+    width: 161px;
+    height: 45px;
+    border-radius: 1000px;
+    border-radius: none;
+    background: var(--gwny, #3E36B0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
 
  @media (max-width: 624px) {
     .doctorProfile{
@@ -115,4 +128,5 @@
     .review{
         padding: 0;
     }
+
  }

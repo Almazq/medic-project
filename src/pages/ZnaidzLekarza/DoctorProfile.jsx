@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react'
 import styles from './style/DoctorProfile.module.css';
-import profileImg from '../../assets/tst,small,845x845-pad,1000x1000,f8f8f8.jpg';
-import MapComponent from './Maps'
 import ReviewCard from '../ReviewCard';
 import { NavLink } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 const reviewData = [
     {},
@@ -14,25 +13,36 @@ const reviewData = [
 
 ]
 function DoctorProfile() {
+    const [doctorInfo , setDoctorInfo] = useState({})
+    const { id } = useParams();
+    const doctorCard = useSelector((state) => state.some.doctorCard);
 
+    useEffect(() => {
+        const doctor = doctorCard.find((item) => item.id == id);
+        setDoctorInfo(doctor || null); 
+      }, [id, doctorCard]);
+    console.log(doctorInfo)
     return (
         <div className={styles.doctorProfile}>
             <div className={styles.doctorProfileRow}>
                 <div className={styles.profileNameBlock}>
                     <div>
-                        <img src={profileImg} alt="profileImage" />
+                        <img src={doctorInfo.imglink} alt="profileImage" />
                     </div>
                     <div>
-                        <p className={styles.profileName}>Ania Kaczmarska</p>
+                        <p className={styles.profileName}>{doctorInfo.name}</p>
                     </div>
                     <div>
-                        <p className={styles.profileType}>Ortopeda</p>
+                        <p className={styles.profileType}>{doctorInfo.type}</p>
                     </div>
-
+                    <div className={styles.profileNameBtn}>
+                        <NavLink to={`/znajdz-lekarza/zapis/${id}`}>Umów wizytę</NavLink>
+                    </div>
                 </div>
                 <div className={styles.profileDescription}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt reiciendis tempore quos recusandae, mollitia dolores optio itaque quibusdam ducimus totam eveniet assumenda nulla, minus laboriosam quod autem veritatis corrupti earum?</p>
+                    <p>{doctorInfo.description}</p>
                 </div>
+
             </div>
             <div className={styles.mapBlock}>
                 {/* <MapComponent address={"Tokyo"} /> */}

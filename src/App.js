@@ -28,6 +28,7 @@ import RecipesPage from './pages/RecipesPage';
 import ResearchResultsPage from './pages/ResearchResults/ResearchResultsPage';
 import Profile from './pages/Profile/Profile';
 import VisitsPageTwo from './pages/Visits/VisitsPageTwo';
+import ZapisDone from './pages/ZnaidzLekarza/Zapis/ZapisDone';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path="/recipes" element={<RecipesPage />} />
             <Route path="/ResearchResult" element={<ResearchResultsPage />} />
             <Route path="/Profile" element={<Profile />} />
+
 
 
             <Route path="/profileDoctor/:id" element={<DoctorProfile />} />

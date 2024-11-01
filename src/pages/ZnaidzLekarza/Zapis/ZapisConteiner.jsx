@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import ZapisFormPage from './ZapisFormPage';
 import ZapisDone from './ZapisDone';
 import { getCookie } from '../../../utilits/AuthToken';
-
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import LoadingPage from './LoadingPage';
 
 import { sendNewOrder } from '../../../services/apiService';
@@ -19,23 +20,28 @@ function ZapisConteiner({ zapisState , isLoggedIn}) {
     const [selectedFile, setSelectedFile] = useState(null); // Хранение файла
     const [formDataObj , setFormDataObj] = useState({})
     const navigate = useNavigate();
-
-
+    const { id } = useParams();
+    const doctorCard = useSelector((state) => state.some.doctorCard);
+    useEffect(() => {
+        const doctor = doctorCard.find((item) => item.id == id);
+        const dataDoctor = {
+            idDoctor: zapisState.idDoctor ?? id,
+            date: zapisState.date ?? "18.05.2024",
+            time: zapisState.time ?? "13:00",
+            allData: doctor
+        }
+        setData(dataDoctor || {
+            idDoctor: id,
+            date: "18.05.2024",
+            time: "13:00",
+            allData: {}
+          }); 
+      }, [id, doctorCard]);
     useEffect(()=>{
         if(!isLoggedIn){
             navigate('/auth/');
           }
     }, [])
-    // проверка куки 
-    // useEffect(() => {
-    //   
-    //   const authToken = getCookie('authToken');
-      
-    //  
-    //   if (!authToken) {
-    //     navigate('/auth');
-    //   }
-    // }, [navigate]);
 
     const handleFileUpload = (event) => {
         const file = event.target.files[0];
@@ -43,18 +49,21 @@ function ZapisConteiner({ zapisState , isLoggedIn}) {
             setSelectedFile(file); // Сохраняем объект файла
         }
     };
-    const getLocalStorage = () => {
-        const savedState = localStorage.getItem('zapisState');
-        if (savedState) {
-            const parsedState = JSON.parse(savedState);
+    // const getLocalStorage = () => {
+    //     const savedState = localStorage.getItem('zapisState');
+    //     if (savedState) {
+    //         const parsedState = JSON.parse(savedState);
 
-            setData(parsedState);
-        }
-    }
-    useEffect(() => {
-        getLocalStorage()
+    //         setData(parsedState);
+    //     }
+    // }
+    // useEffect(() => {
+    //     // getLocalStorage()
 
-    }, [])
+
+
+    // }, [])
+    
     const changeActivePage = (name) => {
         setActivePageName(name)
     }
@@ -71,7 +80,7 @@ function ZapisConteiner({ zapisState , isLoggedIn}) {
 
     const addZapisFc = async (name, surName, phone, pesel, file, comments) => {
         // setActivePageName('loading');
-        alert('successfully created')
+        // alert('successfully created')
         setActivePageName('ZapisDone')
 
         const formData = new FormData();

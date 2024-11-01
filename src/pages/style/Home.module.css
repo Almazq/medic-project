@@ -369,19 +369,18 @@
         width: 100%;
         display: flex;
         align-items: center;
-        margin-bottom: 5px;
-    }
-    .howItWorksImageBlock > div:first-child{
-        border-bottom: 0.8px solid #000;
-    }
-    .howItWorksImageBlock > div:last-child{
-        border-top: 0.8px solid #000;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .itemImg{
-        width: 40%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .itemImg img{
-        width: 100%;
+        width: 80%;
         height: auto;
     }
     .itemText {
@@ -389,12 +388,12 @@
 
     }
     .itemText p {
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 20px;
     }
     .itemText p.itemTextTitle {
-        font-size: 16.5px;
+        font-size: 17.5px;
         font-weight: 500;
         line-height: 20px;
         margin-bottom: 3px;

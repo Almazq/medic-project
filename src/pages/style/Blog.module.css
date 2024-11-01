@@ -329,11 +329,8 @@ button.activeButton {
     }
     .buttonContainer{
         margin: 25px 0;
-        display: grid;
-        grid-template-rows: repeat(2, auto); 
-        grid-auto-flow: column;
+        display: flex;
         gap: 10px; 
-        overflow:auto;
     }
     .buttonContainer button {
         width: auto;
