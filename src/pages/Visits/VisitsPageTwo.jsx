@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './VisitsPageTwo.module.css'
 import VisitsCardTwo from './VisitsCardTwo';
 import { NavLink } from 'react-router-dom';
 import img1 from '../../assets/image1.svg'
 import img2 from '../../assets/image2.svg'
+import { useNavigate } from 'react-router-dom';
 
 const dataVisits = [
     {
@@ -37,7 +38,14 @@ const dataVisits = [
     },
 ]
 
-function VisitsPageTwo() {
+function VisitsPageTwo({isLoggedIn}) {
+    const navigate = useNavigate();
+
+    useEffect(()=>{
+        if(!isLoggedIn){
+            navigate('/auth/');
+          }
+    }, [])
     return (
         <div className={styles.visitsPageTwo}>
             <h1>Zaplanowane wizyty</h1>

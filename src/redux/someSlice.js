@@ -4,132 +4,162 @@ import axios from './axios'; // Исправлено импорт
 
 // Определение начального состояния
 const initialState = {
-  profileState:{
+  profileState: {
     id: 0,
-    userImg : '',
-    userName : 'Tomasz',
-    userSurname : 'Jankowski',
-    gender: 'M', 
+    userImg: '',
+    userName: 'Tomasz',
+    userSurname: 'Jankowski',
+    gender: 'M',
     phone: '',
     email: '',
-    pesel : '',
-    address : {
+    pesel: '',
+    address: {
       city: '',
       cityCode: '',
       street: '',
       numberHouse: '',
     },
   },
-  visitsState : [
-    {
-      id: 0,
-      date: '19.07.2023',
-      time: '19:00 - 19:15',
-      doctorName: 'Ania Kaczmarska',
-      doctorType: 'Ortoped',
-      clinicalName:'NZOZ Poznańskie Centrum Zdrowia',
-      clinicalAddress:'Osiedle Zwycięstwa 108',
-      phone:'234 000 211',
-      serviceName:'Konsultacja ginekologiczna',
-      servicePrice:'290,00 zł'
+  visitsState: {
+    plannedVisits: [
+      {
+        id: 0,
+        date: '19.07.2023',
+        time: '19:00 - 19:15',
+        doctorName: 'Ania Kaczmarska',
+        doctorType: 'Ortoped',
+        clinicalName: 'NZOZ Poznańskie Centrum Zdrowia',
+        clinicalAddress: 'Osiedle Zwycięstwa 108',
+        phone: '234 000 211',
+        serviceName: 'Konsultacja ginekologiczna',
+        servicePrice: '290,00 zł'
 
-    },
-    {
+      },
+      {
         id: 1,
         date: '19.07.2023',
         time: '19:00 - 19:15',
         doctorName: 'Ania Kaczmarska',
         doctorType: 'Ortoped',
-        clinicalName:'NZOZ Poznańskie Centrum Zdrowia',
-        clinicalAddress:'Osiedle Zwycięstwa 108',
-        phone:'234 000 211',
-        serviceName:'Konsultacja ginekologiczna',
-        servicePrice:'290,00 zł'
+        clinicalName: 'NZOZ Poznańskie Centrum Zdrowia',
+        clinicalAddress: 'Osiedle Zwycięstwa 108',
+        phone: '234 000 211',
+        serviceName: 'Konsultacja ginekologiczna',
+        servicePrice: '290,00 zł'
 
-    },
-  ],
-  stateResaerchResult:{
+      },
+    ],
+    completedVisits: [
+      {
+        id: 0,
+        date: '19.07.2023',
+        time: '19:00 - 19:15',
+        doctorName: 'Ania Kaczmarska',
+        doctorType: 'Ortoped',
+        clinicalName: 'NZOZ Poznańskie Centrum Zdrowia',
+        clinicalAddress: 'Osiedle Zwycięstwa 108',
+        phone: '234 000 211',
+        serviceName: 'Konsultacja ginekologiczna',
+        servicePrice: '290,00 zł'
+
+      },
+      {
+        id: 1,
+        date: '19.07.2023',
+        time: '19:00 - 19:15',
+        doctorName: 'Ania Kaczmarska',
+        doctorType: 'Ortoped',
+        clinicalName: 'NZOZ Poznańskie Centrum Zdrowia',
+        clinicalAddress: 'Osiedle Zwycięstwa 108',
+        phone: '234 000 211',
+        serviceName: 'Konsultacja ginekologiczna',
+        servicePrice: '290,00 zł'
+
+      },
+    ],
+  },
+  stateResaerchResult: {
     researchResults: [
       {
-          id: 0,
-          name: 'Morfologia  krwi ',
-          date: '12.12.2023',
-          fileUrl: './assets/imageblog.webp'
+        id: 0,
+        name: 'Morfologia  krwi ',
+        date: '12.12.2023',
+        fileUrl: './assets/imageblog.webp'
       },
     ],
     otherDocs: [
-        {
-            id: 0,
-            name: 'Morfologia  krwi ',
-            date: '12.12.2023',
-            fileUrl: './assets/imageblog.webp'
-        },
-        {
-            id: 0,
-            name: 'Morfologia  kssrwi ',
-            date: '12.12.2023',
-            fileUrl: './assets/imageblog.webp'
-        },
-        {
-            id: 0,
-            name: 'Morfologia  krwi ',
-            date: '12.12.2023',
-            fileUrl: './assets/imageblog.webp'
-        },
-        {
-            id: 0,
-            name: 'Morfologia  krwi ',
-            date: '12.12.2023',
-            fileUrl: './assets/imageblog.webp'
-        }
+      {
+        id: 0,
+        name: 'Morfologia  krwi ',
+        date: '12.12.2023',
+        fileUrl: './assets/imageblog.webp'
+      },
+      {
+        id: 0,
+        name: 'Morfologia  kssrwi ',
+        date: '12.12.2023',
+        fileUrl: './assets/imageblog.webp'
+      },
+      {
+        id: 0,
+        name: 'Morfologia  krwi ',
+        date: '12.12.2023',
+        fileUrl: './assets/imageblog.webp'
+      },
+      {
+        id: 0,
+        name: 'Morfologia  krwi ',
+        date: '12.12.2023',
+        fileUrl: './assets/imageblog.webp'
+      }
     ],
   },
-  stateRecipes:{
+  stateRecipes: {
     active: [
       {
-          id: 8488,
-          userName: 'Daniel Novikov',
-          date: '12.12.2023 - 12.02.2023',
-          description: 'lorem lorem lorem Moscow'
+        id: 8488,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
       },
       {
-          id: 8788,
-          userName: 'Daniel Novikov',
-          date: '12.12.2023 - 12.02.2023',
-          description: 'lorem lorem lorem Moscow'
+        id: 8788,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
       }
     ],
     disactive: [
-        {
-            id: 8488,
-            userName: 'Daniel Novikov',
-            date: '12.12.2023 - 12.02.2023',
-            description: 'lorem lorem lorem Moscow'
+      {
+        id: 8488,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
-        },
-        {
-            id: 8738,
-            userName: 'Daniel Novikov',
-            date: '12.12.2023 - 12.02.2023',
-            description: 'lorem lorem lorem Moscow'
+      },
+      {
+        id: 8738,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
-        },
-        {
-            id: 8878,
-            userName: 'Daniel Novikov',
-            date: '12.12.2023 - 12.02.2023',
-            description: 'lorem lorem lorem Moscow'
+      },
+      {
+        id: 8878,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
-        },
-        {
-            id: 8,
-            userName: 'Daniel Novikov',
-            date: '12.12.2023 - 12.02.2023',
-            description: 'lorem lorem lorem Moscow'
+      },
+      {
+        id: 8,
+        userName: 'Daniel Novikov',
+        date: '12.12.2023 - 12.02.2023',
+        description: 'lorem lorem lorem Moscow'
 
-        }
+      }
     ],
   },
   questionsData: [
@@ -194,18 +224,18 @@ const initialState = {
     },
   ],
   doctorCard: [
-    { id: 0, name: 'Ania Kaczmarska', type: "ortoped", imglink: '/assets/doctor.jpg', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211"}, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 1, name: 'Ania Kaczmarska', type: "logoped", imglink: '/assets/doctor.jpg', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211"} ,description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 2, name: 'Ania Kaczmarska', type: "ortoped", imglink: '/assets/imageblog.webp', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'NYC' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211"}, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 3, name: 'Anna Kacszmarska', type: "surgeon", imglink: '/assets/imageblog.webp', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.08.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '15.08.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211"}, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' }
+    { id: 0, name: 'Ania Kaczmarska', type: "ortoped", imglink: '/assets/doctor.jpg', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211" }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 1, name: 'Ania Kaczmarska', type: "logoped", imglink: '/assets/doctor.jpg', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211" }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 2, name: 'Ania Kaczmarska', type: "ortoped", imglink: '/assets/imageblog.webp', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'NYC' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211" }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 3, name: 'Anna Kacszmarska', type: "surgeon", imglink: '/assets/imageblog.webp', rating: 5, address: { street: "'Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.08.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '15.08.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211" }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' }
 
   ],
   clinicCard: [
-    { id: 0, name: 'Centrum Medyczne POLMED', uslugiAndPrice:[{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]},{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]}], types: ["Chirurg", "Endokrynolog", "Ginekolog" , "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211", nip: '2734168924' , email:'firma@gmail.com'},graphics:{"Pn":'07:00-21:00' , "Wt":'07:00-21:00',"Śr":'07:00-21:00',"Cz":'07:00-21:00',"Pi":'07:00-21:00' , 'So': '07:00-17:00' , 'Ni' : 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 1, name: 'Centrum Medyczne POLMED', uslugiAndPrice:[{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]},{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]}], types: ["Chirurg", "Endokrynolog", "Ginekolog" , "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211", nip: '2734168924' , email:'firma@gmail.com'},graphics:{"Pn":'07:00-21:00' , "Wt":'07:00-21:00',"Śr":'07:00-21:00',"Cz":'07:00-21:00',"Pi":'07:00-21:00' , 'So': '07:00-17:00' , 'Ni' : 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 2, name: 'Centrum Medyczne POLMED', uslugiAndPrice:[{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]},{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]}], types: ["Chirurg", "Endokrynolog", "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211", nip: '2734168924' , email:'firma@gmail.com'},graphics:{"Pn":'07:00-21:00' , "Wt":'07:00-21:00',"Śr":'07:00-21:00',"Cz":'07:00-21:00',"Pi":'07:00-21:00' , 'So': '07:00-17:00' , 'Ni' : 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 3, name: 'Centrum Medyczne POLMED', uslugiAndPrice:[{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]},{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]}], types: ["Chirurg", "Endokrynolog", "Ginekolog" ], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Tokyo' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211", nip: '2734168924' , email:'firma@gmail.com'},graphics:{"Pn":'07:00-21:00' , "Wt":'07:00-21:00',"Śr":'07:00-21:00',"Cz":'07:00-21:00',"Pi":'07:00-21:00' , 'So': '07:00-17:00' , 'Ni' : 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
-    { id: 4, name: 'Centrum Medyczne POLMED', uslugiAndPrice:[{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]},{name:'Ortopeda ' ,list:[{name:'Konsultacja ortopedyczna' , link:'vk.com' , price:'250'} , {name:'Kwalifikacja do operacji' , link:'vk.com' , price:'150'} ]}], types: ["Chirurg", "Endokrynolog", "Ginekolog" , "logoped"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo:{name:'NZOZ Poznańskie Centrum Zdrowia', address:'Osiedle Zwycięstwa 108' , phone:"234 000 211", nip: '2734168924' , email:'firma@gmail.com'},graphics:{"Pn":'07:00-21:00' , "Wt":'07:00-21:00',"Śr":'07:00-21:00',"Cz":'07:00-21:00',"Pi":'07:00-21:00' , 'So': '07:00-17:00' , 'Ni' : 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 0, name: 'Centrum Medyczne POLMED', uslugiAndPrice: [{ name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }, { name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }], types: ["Chirurg", "Endokrynolog", "Ginekolog", "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211", nip: '2734168924', email: 'firma@gmail.com' }, graphics: { "Pn": '07:00-21:00', "Wt": '07:00-21:00', "Śr": '07:00-21:00', "Cz": '07:00-21:00', "Pi": '07:00-21:00', 'So': '07:00-17:00', 'Ni': 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 1, name: 'Centrum Medyczne POLMED', uslugiAndPrice: [{ name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }, { name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }], types: ["Chirurg", "Endokrynolog", "Ginekolog", "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211", nip: '2734168924', email: 'firma@gmail.com' }, graphics: { "Pn": '07:00-21:00', "Wt": '07:00-21:00', "Śr": '07:00-21:00', "Cz": '07:00-21:00', "Pi": '07:00-21:00', 'So': '07:00-17:00', 'Ni': 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 2, name: 'Centrum Medyczne POLMED', uslugiAndPrice: [{ name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }, { name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }], types: ["Chirurg", "Endokrynolog", "Kardiolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211", nip: '2734168924', email: 'firma@gmail.com' }, graphics: { "Pn": '07:00-21:00', "Wt": '07:00-21:00', "Śr": '07:00-21:00', "Cz": '07:00-21:00', "Pi": '07:00-21:00', 'So': '07:00-17:00', 'Ni': 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 3, name: 'Centrum Medyczne POLMED', uslugiAndPrice: [{ name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }, { name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }], types: ["Chirurg", "Endokrynolog", "Ginekolog"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Tokyo' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211", nip: '2734168924', email: 'firma@gmail.com' }, graphics: { "Pn": '07:00-21:00', "Wt": '07:00-21:00', "Śr": '07:00-21:00', "Cz": '07:00-21:00', "Pi": '07:00-21:00', 'So': '07:00-17:00', 'Ni': 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
+    { id: 4, name: 'Centrum Medyczne POLMED', uslugiAndPrice: [{ name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }, { name: 'Ortopeda ', list: [{ name: 'Konsultacja ortopedyczna', link: 'vk.com', price: '250' }, { name: 'Kwalifikacja do operacji', link: 'vk.com', price: '150' }] }], types: ["Chirurg", "Endokrynolog", "Ginekolog", "logoped"], imglink: './assets/imageblog.webp', rating: 5, address: { street: "Ul. Kutrzeby 10, 61-714 ", city: 'Poznań' }, price: '190', dates: [{ date: '18.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }, { date: '22.05.2024', hours: ['13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00', '13:00',] }], profileLink: 'vk.com', medCenterInfo: { name: 'NZOZ Poznańskie Centrum Zdrowia', address: 'Osiedle Zwycięstwa 108', phone: "234 000 211", nip: '2734168924', email: 'firma@gmail.com' }, graphics: { "Pn": '07:00-21:00', "Wt": '07:00-21:00', "Śr": '07:00-21:00', "Cz": '07:00-21:00', "Pi": '07:00-21:00', 'So': '07:00-17:00', 'Ni': 'Zamknięte' }, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. Aliquam erat volutpat. Morbi sit amet turpis euismod, tincidunt libero ac, ultrices elit. Vestibulum non lectus eu massa tristique vehicula eu vel massa.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue viverra felis, vel condimentum diam porttitor vel. ' },
 
   ],
   status: 'idle',
@@ -214,11 +244,10 @@ const initialState = {
 
 // Создание асинхронного действия для загрузки данных блогов
 export const fetchBlogs = createAsyncThunk('some/fetchBlogs', async () => {
-  const response = await axios.get('/blogs'); 
+  const response = await axios.get('/blogs');
   return response.data;
 });
 
-// Создание слайса
 const someSlice = createSlice({
   name: 'some',
   initialState,
@@ -228,6 +257,10 @@ const someSlice = createSlice({
     },
     setBlogs: (state, action) => {
       state.blogs = action.payload;
+    },
+    deleteVisitById: (state, action) => {
+      const idToDelete = action.payload;
+      state.visitsState.plannedVisits = state.visitsState.plannedVisits.filter(visit => visit.id !== idToDelete);
     },
   },
   extraReducers: (builder) => {
@@ -246,7 +279,6 @@ const someSlice = createSlice({
   },
 });
 
-// Экспорт редукторов и действий
-export const { setQuestionsData, setBlogs } = someSlice.actions;
-
+// Экспорт действия deleteVisitById
+export const { setQuestionsData, setBlogs, deleteVisitById } = someSlice.actions;
 export default someSlice.reducer;

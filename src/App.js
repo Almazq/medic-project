@@ -29,6 +29,7 @@ import ResearchResultsPage from './pages/ResearchResults/ResearchResultsPage';
 import Profile from './pages/Profile/Profile';
 import VisitsPageTwo from './pages/Visits/VisitsPageTwo';
 import ZapisDone from './pages/ZnaidzLekarza/Zapis/ZapisDone';
+import AddReviewsPage from './pages/AddReviewsPage/AddReviewsPage';
 
 
 function App() {
@@ -45,13 +46,14 @@ function App() {
             <Route path="/howitwork" element={<HowItWorks />} />
             <Route path="/znajdz-lekarza/*" element={<ZnaidzLekarzaConteiner isLoggedIn={isLoggedIn}/>} />
             <Route path="/znajdz-lekarzaversion2/" element={<ZhaidzLekarzaVersion2 />} />
-            <Route path="/visits" element={<VisitsPage />} />
-            <Route path="/visits-version2" element={<VisitsPageTwo />} />
+            <Route path="/visits" element={<VisitsPage isLoggedIn={isLoggedIn}/>} />
+            <Route path="/visits-version2" element={<VisitsPageTwo isLoggedIn={isLoggedIn}/>} />
             <Route path="/recipes" element={<RecipesPage />} />
             <Route path="/ResearchResult" element={<ResearchResultsPage />} />
             <Route path="/Profile" element={<Profile />} />
 
 
+            <Route path="/review-visits/:id" element={<AddReviewsPage isLoggedIn={isLoggedIn}/>} />
 
             <Route path="/profileDoctor/:id" element={<DoctorProfile />} />
             <Route path="/reviews/user/:id" element={<ReviewsUser />} />

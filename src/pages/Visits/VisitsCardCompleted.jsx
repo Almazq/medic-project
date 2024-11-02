@@ -1,11 +1,12 @@
 import React from 'react'
-import styles from './VisitsCard.module.css';
+import styles from './VisitsCardCompleted.module.css';
 import imgName from '../../assets/simple-line-i.svg';
 import imgType from '../../assets/Vector14.svg';
 import phoneImg from '../../assets/ph_phone-light.svg';
 import closeImg from '../../assets/Vector (33).svg'
+import { NavLink } from 'react-router-dom';
 
-function VisitsCard({ data , deleteFc }) {
+function VisitsCardCompleted({ data }) {
 
   return (
     <div className={styles.visitsCard}>
@@ -33,8 +34,8 @@ function VisitsCard({ data , deleteFc }) {
         <div className={styles.visitsCardBottomPrice}>
             <p>{data.serviceName} - {data.servicePrice}</p>
         </div>
-        <span className={styles.deleteBtn} onClick={()=> deleteFc(data.id)}><img src={closeImg} alt="X" /></span>
+        <NavLink to={`/review-visits/${data.id}`} className={styles.reviewsBtn}>Napisać recenzję</NavLink>
     </div>
   )
 }
-export default VisitsCard;
+export default VisitsCardCompleted;

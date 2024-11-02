@@ -112,7 +112,12 @@
       border-radius: 25px;
     }
 }
+@media (max-width: 384px) {
+    .sliderRow{
+        width: 98%;
 
+    }
+}
 @media (min-width: 1024px) and (max-width: 1280px) {
     .sliderRow{
         width: 100%;

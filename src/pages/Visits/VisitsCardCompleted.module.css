@@ -7,16 +7,21 @@
     box-shadow: 0px 0px 50px 0px #0000001A;
     position: relative;
 }
-.deleteBtn{
+
+.reviewsBtn{
     position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 35px;
-    right: 35px;
-    cursor: pointer;
-}
-.deleteBtn img{
-    width: 100%;
+    top: 30px;
+    right: 18px;
+    padding: 7px 14px ;
+    border-radius: 1000px;
+    background: var(--gwny, #3E36B0);
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 21.86px;
+    text-align: center;
+
 }
 .visitsCardTimeBlock p{
     font-size: 18px;
@@ -123,13 +128,16 @@
         justify-content: center;
 
     }
-    .deleteBtn{
+    .reviewsBtn{
         position: absolute;
-        width: 18px;
-        height: 18px;
         top: 20px;
-        right: 20px;
-        cursor: pointer;
+        right: 15px;
+        padding: 4px 8px ;
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 21.86px;
+        text-align: center;
+    
     }
 
 }

@@ -143,4 +143,19 @@
         margin-top: 15px;
     }
     
+    .changeInputBlockAddress{
+        flex-wrap: wrap;
+    }
+    .changeInputBlockAddress > div:first-child{
+        width: 100%;
+    
+    }
+    .changeInputBlockAddress > div:last-child{
+        
+        width: 40%;
+    }
+    .changeInputBlockAddress > div:last-child p {
+        text-align: left;
+    }
+    
 }
